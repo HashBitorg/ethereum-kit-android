@@ -33,6 +33,13 @@ class TransactionSource(val name: String, val type: SourceType) {
                 SourceType.Etherscan("https://api.bscscan.com", "https://bscscan.com", apiKey)
             )
         }
+        
+        fun hbitscan(apiKey: String): TransactionSource {
+            return TransactionSource(
+                "explorer.hashbit.org",
+                SourceType.Etherscan("https://explorer.hashbit.org/api", "https://explorer.hashbit.org", apiKey)
+            )
+        }        
 
         fun polygonscan(apiKey: String): TransactionSource {
             return TransactionSource(
