@@ -59,6 +59,16 @@ sealed class RpcSource() {
         fun polygonRpcHttp(): Http {
             return Http(listOf(URL("https://polygon-rpc.com")), null)
         }
+        
+        fun hashbitHttp(): Http {
+            return Http(
+                    listOf(
+                            URL("https://rpc.hashbit.org/"),
+                            URL("https://mainnet-rpc.hashbit.org/")
+                    ),
+                    null
+            )
+        }
 
         fun optimismRpcHttp(): Http {
             return Http(listOf(URL("https://mainnet.optimism.io")), null)
