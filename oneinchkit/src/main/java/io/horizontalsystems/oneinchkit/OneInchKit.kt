@@ -23,6 +23,7 @@ class OneInchKit(
         Chain.Polygon,
         Chain.Optimism,
         Chain.ArbitrumOne,
+        Chain.Hashbit -> Address("0x3BAb21D55Bc77995943c61588decCAa9c56CF634")        
         Chain.Avalanche -> Address("0x1111111254eeb25477b68fb85ed929f73a960582")
         else -> throw IllegalArgumentException("Invalid Chain: ${evmKit.chain.id}")
     }
